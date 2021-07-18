@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RansomApp.Views.MainPage"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Black">
+                <Label 
+                Text="HAS SIDO HACKEADO!"
+                   TextColor="RED"
+                   FontSize="120"
+                    VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                <Label 
+                Text="Para desbloquear tus archivos necesitas acceder a https://github.com/LarryKapija/RansomMessages/tree/main/HACKED"
+                   TextColor="RED"
+                   FontSize="Large"
+                    Margin="20,10"
+                    VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+
+                <Entry
+                    x:Name="KeyEntry"
+                    Placeholder="Inserte aqui la llave"
+                    BackgroundColor="Gray"
+                    Margin="20"
+                    PlaceholderColor="White"
+                    Text="{Binding Key}"
+                    />
+
+                <Button
+                    Text="Desbloquear"
+                    TextColor="Red"
+                    BackgroundColor="Black"
+                    Padding="20"
+                    BorderColor="Red"
+                    BorderWidth="2"
+                    Margin="100,0"
+                    Command="{Binding DecryptCommand}"
+                    />
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>
